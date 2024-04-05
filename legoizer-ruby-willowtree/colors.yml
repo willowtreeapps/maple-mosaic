@@ -1,3 +1,6 @@
+# names & ids are from the "LEGO" system
+# hex code reference: https://rebrickable.com/colors/
+
 -
   :name: Black
   :id: 26
@@ -73,3 +76,75 @@
   :red: 0xe4
   :green: 0xcd
   :blue: 0x9e
+
+-
+  :name: Bright Pink
+  #BrickLink Bright Pink
+  :id: 222
+  :red: 0xe4
+  :green: 0xad
+  :blue: 0xc8
+
+-
+  :name: Dark Blue
+  #BrickLink Dark Blue
+  :id: 140
+  :red: 0x0a
+  :green: 0x34
+  :blue: 0x63
+
+-
+  :name: Bright Purple
+  #BrickLink Dark Pink
+  :id: 221
+  :red: 0xc8
+  :green: 0x70
+  :blue: 0xa0
+
+-
+  :name: Medium Lilac
+  #BrickLink Dark Purple
+  :id: 268
+  :red: 0x3f
+  :green: 0x36
+  :blue: 0x91
+
+-
+  :name: Sand Yellow
+  #BrickLink Dark Tan
+  :id: 138
+  :red: 0x95
+  :green: 0x8a
+  :blue: 0x73
+
+-
+  :name: Bright Yellowish Green
+  #BrickLink Lime
+  :id: 119
+  :red: 0xbb
+  :green: 0xe9
+  :blue: 0x0b
+
+-
+  :name: Medium Azure
+  #BrickLink Medium Azure
+  :id: 322
+  :red: 0x36
+  :green: 0xae
+  :blue: 0xbf
+
+-
+  :name: Medium Blue
+  #BrickLink Medium Blue
+  :id: 102
+  :red: 0x5a
+  :green: 0x93
+  :blue: 0xdb
+
+-
+  :name: Medium Nougat
+  #BrickLink Medium Nougat
+  :id: 312
+  :red: 0xaa
+  :green: 0x7d
+  :blue: 0x55

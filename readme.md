@@ -1,5 +1,5 @@
 ## The Maple Mosaic
-An in-office Lego wall where a pixel image is built by people over time using 16x16 baseplates and 2x2 bricks. The current wall exists as a 144x144-stud wall, separated into 81 16x16-stud sections. The wall uses 11 common Lego colors, but may expand in the future to add more colors. Since we're using 2x2 bricks, the wall supports a 72x72 pixel image.
+An in-office Lego wall where a pixel image is built by people over time using 16x16 baseplates and 2x2 bricks. The current wall exists as a 144x144-stud wall, separated into 81 16x16-stud sections. The wall uses 20 common Lego colors, but may expand in the future to add more colors. Since we're using 2x2 bricks, the wall supports a 72x72 pixel image.
 
 ## The Scripts Behind It
 The scripts in this repo are used to create the image and instructions for the Maple Mosaic.
@@ -27,4 +27,13 @@ Lego colors are _generally_ a fool's errand as there are differences in their hu
 8  Orange:              254,138,24      #FE8A18 (Lego 'Bright Orange')
 9  Reddish Brown:       88,42,18        #582A12
 10 Tan:                 228,205,158     #E4CD9E (Lego 'Brick Yellow')
+11 Bright Pink:         228,173,200     #E4ADC8
+12 Dark Blue:           10,52,99        #0A3463
+13 Dark Pink:           200,112,160     #C870A0 (Lego 'Bright Purple')
+14 Dark Purple:         63,54,145       #3F3691 (Lego 'Medium Lilac')
+15 Dark Tan:            149,138,115     #958A73 (Lego 'Sand Yellow')
+16 Lime:                187,233,11      #BBE90B (Lego 'Bright Yellowish Green')
+17 Medium Azure:        54,174,191      #36AEBF
+18 Medium Blue:         90,147,219      #5A93DB
+19 Medium Nougat:       170,125,85      #AA7D55
 ```
