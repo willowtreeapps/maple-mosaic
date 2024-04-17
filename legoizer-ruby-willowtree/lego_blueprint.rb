@@ -11,7 +11,8 @@ class LegoBlueprint
   BRICK_PIXEL_HEIGHT = 1
 
   # Load the Lego brick colors into a constant.
-  BRICK_COLORS = YAML.load(IO.read(File.join(File.dirname(__FILE__), 'colors.yml'))).map do |hash|
+  colors_path = File.join(File.dirname(__FILE__), "..", "colors.yml")
+  BRICK_COLORS = YAML.load(IO.read(colors_path)).map do |hash|
     Color.new(**hash)
   end
 
