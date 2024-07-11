@@ -2,11 +2,12 @@ require 'color_difference'
 
 class Color
 
-  attr_reader :name, :id, :red, :green, :blue, :alpha
+  attr_reader :name, :id, :symbol, :red, :green, :blue, :alpha
 
-  def initialize(name: nil, id: nil, red:, green:, blue:, alpha: 0xff)
+  def initialize(name: nil, id: nil, symbol: nil, red:, green:, blue:, alpha: 0xff)
     @name = name
     @id = id
+    @symbol = symbol
     @red = red
     @green = green
     @blue = blue
