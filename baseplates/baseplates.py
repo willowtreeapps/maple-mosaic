@@ -95,6 +95,9 @@ if __name__ == "__main__":
 
     try:
         with Image.open(file) as image:
+            if image.mode != "RGB":
+                image = image.convert("RGB")
+
             verify_dimensions(image)
 
             for x in range(0, int(image.width / PLATE_SIZE)):

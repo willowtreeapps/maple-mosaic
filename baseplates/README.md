@@ -7,8 +7,8 @@ This is a script that generates lego mosaic instructions for each baseplate, giv
 It's recommended to use [pyenv](https://github.com/pyenv/pyenv) to use the Python version specified in `.python_version` and use a virtual environment to install the dependencies.
 
 ```bash
-python3 -m venv venv
-source venv/bin/activate
+python3 -m venv .venv
+source .venv/bin/activate
 pip install -r requirements.txt
 deactivate
 ```
