@@ -1,20 +1,38 @@
 ## The Maple Mosaic
-An in-office Lego wall where a pixel image is built by people over time using 16x16 baseplates and 2x2 bricks. The current wall exists as a 144x144-stud wall, separated into 81 16x16-stud sections. The wall uses 11 common Lego colors, but may expand in the future to add more colors. Since we're using 2x2 bricks, the wall supports a 72x72 pixel image.
+An in-office Lego wall where a pixel image is built by people over time using 16x16 baseplates and 2x2 bricks. The current wall exists as a 144x144-stud wall, separated into 81 16x16-stud sections. The wall uses 20 common Lego colors, but may expand in the future to add more colors. Since we're using 2x2 bricks, the wall supports a 72x72 pixel image.
 
 ## The Scripts Behind It
 The scripts in this repo are used to create the image and instructions for the Maple Mosaic.
 
-First, a Ruby script is used to take any ol' image and turn it into its closest Lego colors, using the 11 colors we've defined.
+### 1. Legoizer
+
+First, a Ruby script is used to take any ol' image and turn it into its closest Lego colors, using the 20 colors we've defined.
 
 One important step here is to use a pixel color counter - e.g. https://townsean.github.io/canvas-pixel-color-counter/ - to check how many bricks you'll need. We currently have 1200 bricks per color available.
 
-Next, a JavaScript script is used in Photoshop to parse the image into individual instruction sheets. These sheets can then be printed out 4 per page and set up at the mosaic wall.
+### 2. Baseplates
 
-To print sheets, you can use the "Multiple Images to PDF" chrome extension. Left and Top Margins set to 0, Fit pdf page to image size, and then use Preview to print 4 or 6 to a page.
+Next, a Python script is used to take the Legoized image and split it into 16x16 baseplates. This script will generate a set of instructions for each baseplate, in the form of an image file.
+
+<details>
+<summary>Deprecated</summary>
+Perviously, a JavaScript script wass used in Photoshop to parse the image into individual instruction sheets.
+</details>
+
+These sheets can then be printed out 4 per page and set up at the mosaic wall.
+
+To print sheets, you can use a tool to combine images into a PDF. Some options include:
+- Preview.app
+  - Open all images in Preview
+  - Select all in  the sidebar
+  - Print
+  - Expand Layout options and select 4 or 6 per page
+- The [Multiple Images to PDF](https://workspace.google.com/marketplace/app/multiple_images_to_pdf/650660206328) chrome extension. Left and Top Margins set to 0, Fit pdf page to image size, and then use Preview to print 4 or 6 to a page.
 
 ## The Colors
-Lego colors are _generally_ a fool's errand as there are differences in their hues, naming, etc. We're using hex codes from https://rebrickable.com/colors/ here. Our colors:
+Lego colors are _generally_ a fool's errand as there are differences in their hues, naming, etc. We're using hex codes from https://rebrickable.com/colors/ here. Colors are defined in `colors.yml`, which is used by both scripts.
 
+Our colors:
 ```
 0  Black:               5,19,29         #05131D
 1  Dark Bluish Gray:    108,110,104     #6C6E68 (Lego 'Dark Stone Grey')
@@ -27,4 +45,13 @@ Lego colors are _generally_ a fool's errand as there are differences in their hu
 8  Orange:              254,138,24      #FE8A18 (Lego 'Bright Orange')
 9  Reddish Brown:       88,42,18        #582A12
 10 Tan:                 228,205,158     #E4CD9E (Lego 'Brick Yellow')
+11 Bright Pink:         228,173,200     #E4ADC8
+12 Dark Blue:           10,52,99        #0A3463
+13 Dark Pink:           200,112,160     #C870A0 (Lego 'Bright Purple')
+14 Dark Purple:         63,54,145       #3F3691 (Lego 'Medium Lilac')
+15 Dark Tan:            149,138,115     #958A73 (Lego 'Sand Yellow')
+16 Lime:                187,233,11      #BBE90B (Lego 'Bright Yellowish Green')
+17 Medium Azure:        54,174,191      #36AEBF
+18 Medium Blue:         90,147,219      #5A93DB
+19 Medium Nougat:       170,125,85      #AA7D55
 ```
